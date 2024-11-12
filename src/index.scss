@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.demoSass {
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+}

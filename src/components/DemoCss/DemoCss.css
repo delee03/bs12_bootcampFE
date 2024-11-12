@@ -1,0 +1,10 @@
+.demoGlobal h2 {
+    background-color: blueviolet;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.demoGlobal p {
+    font-size: 15px;
+    color: red;
+}

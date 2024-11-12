@@ -328,7 +328,10 @@ const DemoShoeShop = () => {
     return (
         <>
             <h2>Đây là Danh sách giày</h2>
-            <div className="grid grid-cols-3">{renderShoe()}</div>
+            <div className="container">
+                <div className="grid grid-cols-3">{renderShoe()}</div>
+                {/* <p className="text-main"></p> */}
+            </div>
         </>
     );
 };
