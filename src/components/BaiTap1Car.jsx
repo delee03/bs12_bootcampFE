@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import hinhAnh from "../assets/black-car.jpg";
 
-const BaiTap1Car = () => {
+const BaiTap1Car = (props) => {
+    console.log(props.count);
+    console.log(props.title);
     const [carImage, setCarImage] = useState("black-car.jpg");
     const arrButton = [
         {
@@ -30,7 +32,20 @@ const BaiTap1Car = () => {
         },
     ];
     return (
-        <div className="container">
+        <div className="container mt-8">
+            <h2 className="bg-sky-500 text-white">
+                Demo về props : {props.title} {props.count}
+            </h2>
+
+            <button
+                onClick={() => {
+                    props.updateCount();
+                }}
+                className="mt-5 px-5 py-2 rounded-lg bg-green-500"
+            >
+                Tăng số đếm +1
+            </button>
+
             {/* <img src={"./public/CarBasic/products/black-car.jpg"} alt="" />
             <img src={hinhAnh} alt="" /> */}
             <h2 className="text-center text-sky-500 text-3xl font-bold mt-10">

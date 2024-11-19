@@ -1,3 +1,4 @@
+import { useState } from "react";
 import BaiTap1Car from "./components/BaiTap1Car";
 import CardComponent1 from "./components/CardComponent1";
 import CardComponent2 from "./components/CardComponent2";
@@ -10,8 +11,18 @@ import DemoState from "./components/DemoState";
 import FooterComponent from "./components/FooterComponent";
 import HeaderComponent from "./components/HeaderComponent";
 import NavComponent from "./components/NavComponent";
+import BaiTap1CatProps from "./components/BaiTap1CatProps";
+import BTDienThoai from "./components/BTDienThoai/BTDienThoai";
+import DienThoaiItem from "./components/BTDienThoai/DienThoaiItem";
 
 function App() {
+    //hook
+    const [count, setCount] = useState(1);
+
+    function updateStateCount() {
+        setCount(count + 1);
+    }
+
     return (
         <>
             {/* <div>Đây là dự án React đầu tiên của tôi</div>; */}
@@ -57,7 +68,15 @@ function App() {
             <br />
             <br />
             <br /> */}
-            <BaiTap1Car />
+            {/* Props  */}
+            {/* <BaiTap1Car
+                count={count}
+                title={"Hello tháng 11"}
+                updateCount={updateStateCount}
+            /> */}
+            <BaiTap1CatProps />
+
+            <BTDienThoai />
         </>
     );
 }
